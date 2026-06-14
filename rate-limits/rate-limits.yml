@@ -1,0 +1,36 @@
+rateLimits:
+  - name: Anaconda.org REST API
+    description: >
+      The Anaconda.org REST API (api.anaconda.org) does not publish formal
+      rate limit documentation for unauthenticated read access to conda-forge
+      package metadata. In practice, the API is accessible without
+      authentication for GET requests and is used by automated tooling and
+      CI pipelines at scale. Anaconda may apply unpublished throttling to
+      unauthenticated clients that produce abnormally high request volumes.
+      Users automating bulk lookups should add reasonable delays between
+      requests and use authenticated sessions with an Anaconda token when
+      making large numbers of calls.
+    url: https://anaconda.org/conda-forge
+    header: ""
+    limit: unspecified
+    unit: ""
+    notes: >
+      No SLA is provided for the free community-facing API. Anaconda
+      Enterprise customers have separate agreements with defined SLAs.
+  - name: conda Channel Repodata (CDN)
+    description: >
+      The conda channel repodata files (repodata.json, repodata.json.zst,
+      channeldata.json) served from conda.anaconda.org are delivered through
+      Cloudflare CDN with aggressive caching (cache-control: public,
+      max-age=1200). No per-client rate limit is documented. Clients are
+      expected to cache index files locally and re-fetch only when stale.
+      The conda and mamba clients implement this caching behavior
+      automatically. Downloading the full repodata.json for linux-64 is
+      ~400 MB uncompressed; the .zst variant is ~50 MB.
+    url: https://conda.anaconda.org/conda-forge/
+    header: Cache-Control
+    limit: unspecified
+    unit: ""
+    notes: >
+      CDN edge caches repodata for 20 minutes (max-age=1200). Clients
+      should respect cache headers and avoid unnecessary re-downloads.

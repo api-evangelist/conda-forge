@@ -1,0 +1,39 @@
+plans:
+  - name: Free / Open Access
+    description: >
+      conda-forge is a fully community-led, open-source project. All APIs —
+      including the Anaconda.org REST API and the conda channel repodata
+      endpoints — are publicly accessible at no cost. There are no subscription
+      tiers, no API keys required for read operations, and no commercial
+      licensing fees for using the package channel or its metadata APIs.
+      Packages themselves are free to install and redistribute under the
+      open-source licenses of the individual upstream projects.
+    url: https://conda-forge.org/docs/user/introduction/
+    price: Free
+    pricingModel: free
+    currency: ""
+    features:
+      - name: Package Metadata Lookup
+        description: >
+          Retrieve full package metadata for any conda-forge package via
+          https://api.anaconda.org/package/conda-forge/{name}, including
+          version list, platform availability, license, URLs, and download
+          statistics.
+        quota: unlimited
+      - name: Channel Index Access
+        description: >
+          Download repodata.json or channeldata.json for any platform subdir
+          served from conda.anaconda.org/conda-forge. Used by conda and
+          mamba clients to resolve dependencies.
+        quota: unlimited
+      - name: Package Search
+        description: >
+          Search across all channels on Anaconda.org using the search
+          endpoint at https://api.anaconda.org/search?name={term}.
+        quota: unlimited
+      - name: Package Downloads
+        description: >
+          Download any conda package archive directly from the
+          cdn.anaconda.com CDN. Download counts are tracked and reported
+          in package metadata.
+        quota: unlimited

@@ -1,0 +1,120 @@
+name: conda-forge
+description: >
+  conda-forge is a community-led conda package channel providing over 33,000
+  open-source packages for scientific computing, data science, and general
+  Python development. The project offers programmatic access through the
+  Anaconda.org REST API for querying package metadata, searching packages by
+  name, retrieving version histories, and accessing distribution file details.
+  Additionally, the conda repository format exposes repodata and channeldata
+  JSON indices that enumerate all packages, versions, platforms, and dependency
+  metadata across every supported architecture.
+image: https://conda-forge.org/assets/img/anvil_white.png
+tags:
+  - conda
+  - packages
+  - scientific-computing
+  - python
+  - open-source
+created: "2026-06-13"
+modified: "2026-06-13"
+url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/apis.yml
+specificationVersion: "0.19"
+apis:
+  - name: Anaconda.org Package API
+    description: >
+      REST API hosted on api.anaconda.org that provides read access to
+      conda-forge package metadata including package details, version lists,
+      platform availability, download counts, licensing, and distribution
+      file checksums. Supports lookup by channel and package name and serves
+      as the primary programmatic interface to the conda-forge package index.
+    humanURL: https://anaconda.org/conda-forge
+    baseURL: https://api.anaconda.org
+    tags:
+      - packages
+      - metadata
+      - search
+      - versions
+    properties:
+      - type: Documentation
+        url: https://conda-forge.org/docs/
+      - type: OpenAPI
+        url: https://api.anaconda.org/docs
+      - type: PackageSearch
+        url: https://api.anaconda.org/search?name={package_name}
+      - type: PackageMetadata
+        url: https://api.anaconda.org/package/conda-forge/{package_name}
+      - type: UserProfile
+        url: https://api.anaconda.org/user/conda-forge
+      - type: x-plans
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/plans/plans.yml
+      - type: x-rate-limits
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/rate-limits/rate-limits.yml
+      - type: x-finops
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: conda-forge Community
+        email: ""
+        url: https://conda-forge.org/community/
+  - name: conda-forge Channel Repodata API
+    description: >
+      Static JSON index files served over HTTPS from conda.anaconda.org for
+      each supported platform subdirectory (linux-64, osx-64, win-64, etc.).
+      repodata.json and repodata.json.zst enumerate every available conda
+      package archive with its filename, version, build string, SHA256
+      checksum, file size, and dependency specifications. channeldata.json
+      provides a cross-subdir index of all packages with documentation URLs,
+      license information, and supported platform lists.
+    humanURL: https://conda.anaconda.org/conda-forge
+    baseURL: https://conda.anaconda.org/conda-forge
+    tags:
+      - repodata
+      - channel
+      - index
+      - packages
+      - metadata
+    properties:
+      - type: Documentation
+        url: https://conda-forge.org/docs/maintainer/infrastructure/
+      - type: ChannelData
+        url: https://conda.anaconda.org/conda-forge/channeldata.json
+      - type: RepodataLinux64
+        url: https://conda.anaconda.org/conda-forge/linux-64/repodata.json.zst
+      - type: RepodataOsx64
+        url: https://conda.anaconda.org/conda-forge/osx-64/repodata.json.zst
+      - type: RepodataWin64
+        url: https://conda.anaconda.org/conda-forge/win-64/repodata.json.zst
+      - type: RepodataLinuxAarch64
+        url: https://conda.anaconda.org/conda-forge/linux-aarch64/repodata.json.zst
+      - type: x-plans
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/plans/plans.yml
+      - type: x-rate-limits
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/rate-limits/rate-limits.yml
+      - type: x-finops
+        url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: conda-forge Community
+        email: ""
+        url: https://conda-forge.org/community/
+common:
+  - type: GettingStarted
+    url: https://conda-forge.org/docs/user/introduction/
+  - type: GitHub
+    url: https://github.com/conda-forge
+  - type: Status
+    url: https://conda-forge.org/status/
+  - type: PrivacyPolicy
+    url: https://www.anaconda.com/privacy-policy
+  - type: TermsOfService
+    url: https://www.anaconda.com/terms-of-service
+  - type: Blog
+    url: https://conda-forge.org/news/
+  - type: Forum
+    url: https://github.com/conda-forge/conda-forge.github.io/discussions
+  - type: Chat
+    url: https://conda-forge.zulipchat.com/
+  - type: Support
+    url: https://github.com/conda-forge/conda-forge.github.io/issues
+maintainers:
+  - FN: Kin Lane
+    X-twitter: apievangelist
+    email: kin@apievangelist.com

@@ -1,0 +1,41 @@
+finops:
+  - name: conda-forge Cost Model
+    description: >
+      conda-forge is a community-driven, entirely free and open-source project.
+      All package distribution, metadata APIs, and channel index files are
+      provided at no cost to end users. The project's infrastructure costs
+      are covered through a combination of Anaconda's in-kind hosting
+      contributions and NumFOCUS sponsored fiscal support. There are no
+      metered API costs, no per-download fees, and no bandwidth charges for
+      accessing the conda-forge channel through conda.anaconda.org.
+
+      For organizations with compliance requirements around Anaconda's Terms
+      of Service, Anaconda offers commercial subscription plans (Starter,
+      Business, Enterprise) that cover usage of the Anaconda distribution
+      and Anaconda.org hosting for proprietary channels. These commercial
+      plans do not apply to the conda-forge community channel itself, which
+      remains free for all users.
+    url: https://www.anaconda.com/pricing
+    model: free
+    notes: >
+      Anaconda changed its Terms of Service in 2023 to require commercial
+      licenses for organizations with more than 200 employees using the
+      Anaconda defaults channel. The conda-forge channel and its packages
+      are not subject to this restriction and remain freely available under
+      their respective open-source licenses. Organizations can safely use
+      conda-forge packages without a commercial Anaconda subscription by
+      pointing conda at the conda-forge channel instead of the defaults
+      channel.
+  - name: Self-Hosting Costs
+    description: >
+      Organizations that mirror the conda-forge channel internally (e.g.,
+      using conda-mirror or Quetz) incur their own storage and bandwidth
+      costs. The full conda-forge channel is several terabytes; mirroring
+      a subset filtered by platform and package selection is common.
+      Quetz is an open-source conda channel server that can be self-hosted
+      to create private or mirrored channels.
+    url: https://github.com/mamba-org/quetz
+    model: self-hosted
+    notes: >
+      No per-package or per-download charges from conda-forge itself;
+      only infrastructure costs for self-hosted mirrors apply.
