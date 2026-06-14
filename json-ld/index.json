@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "conda-forge",
+  "description": "conda-forge is a community-led conda package channel providing over 33,000 open-source packages for scientific computing, data science, and general Python development.",
+  "url": "https://conda-forge.org",
+  "logo": "https://conda-forge.org/assets/img/anvil_white.png",
+  "sameAs": [
+    "https://github.com/conda-forge",
+    "https://conda-forge.zulipchat.com/",
+    "https://bsky.app/profile/conda-forge.org"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "community",
+      "url": "https://conda-forge.org/community/"
+    }
+  ],
+  "knowsAbout": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Anaconda.org Package API",
+      "description": "REST API for querying conda-forge package metadata, version histories, and distribution file details.",
+      "url": "https://api.anaconda.org",
+      "applicationCategory": "Package Management API",
+      "operatingSystem": "All"
+    },
+    {
+      "@type": "DataFeed",
+      "name": "conda-forge Channel Repodata",
+      "description": "Static JSON index files for each supported platform subdirectory enumerating all available conda packages with versions, build strings, checksums, and dependency specifications.",
+      "url": "https://conda.anaconda.org/conda-forge/channeldata.json",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "conda-forge Open Source Packages",
+      "description": "Free and open-source conda packages for scientific computing and data science.",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  ]
+}
