@@ -1,12 +1,11 @@
 {
   "feeds": [
     {
-      "type": "BlogRSS",
-      "url": "https://conda-forge.org/news/rss.xml"
-    },
-    {
-      "type": "BlogRSS",
-      "url": "https://conda-forge.org/blog/rss.xml"
+      "source": "https://www.anaconda.com/terms-of-service",
+      "feed_url": "https://www.anaconda.com/terms-of-service",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "posts": [
@@ -291,5 +290,7 @@
       "type": "blog"
     }
   ],
-  "fetched": "2026-06-13"
+  "fetched": "2026-06-14T20:42:17Z",
+  "repo": "conda-forge",
+  "post_count": 0
 }
