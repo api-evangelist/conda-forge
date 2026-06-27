@@ -108,7 +108,7 @@ common:
     url: https://www.anaconda.com/terms-of-service
   - type: Blog
     url: https://conda-forge.org/news/
-  - type: Forum
+  - type: Forums
     url: https://github.com/conda-forge/conda-forge.github.io/discussions
   - type: Chat
     url: https://conda-forge.zulipchat.com/
