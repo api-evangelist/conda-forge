@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: anaconda.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 22 19:16:28 2026 GMT
+  hsts: true
+  hsts_max_age: 15552000
+- host: api.anaconda.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  6 19:50:00 2026 GMT
+  hsts: true
+  hsts_max_age: 15552000
+- host: conda.anaconda.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  6 19:50:00 2026 GMT
+  hsts: true
+  hsts_max_age: 15552000
+domains:
+- domain: anaconda.org
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

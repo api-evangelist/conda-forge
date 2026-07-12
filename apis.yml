@@ -96,6 +96,10 @@ apis:
         email: ""
         url: https://conda-forge.org/community/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/conda-forge-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/conda-forge-domain-security.yml
   - type: GettingStarted
     url: https://conda-forge.org/docs/user/introduction/
   - type: GitHub
