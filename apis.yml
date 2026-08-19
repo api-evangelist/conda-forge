@@ -30,7 +30,7 @@ tags:
 created: "2026-06-13"
 modified: "2026-06-13"
 url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/apis.yml
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 apis:
   - name: Anaconda.org Package API
     description: >
