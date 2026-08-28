@@ -8,6 +8,17 @@ description: >
   Additionally, the conda repository format exposes repodata and channeldata
   JSON indices that enumerate all packages, versions, platforms, and dependency
   metadata across every supported architecture.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
