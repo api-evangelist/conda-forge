@@ -33,10 +33,10 @@ accessModel:
   method: derived
 image: https://conda-forge.org/assets/img/anvil_white.png
 tags:
-  - conda
+  - Conda
   - Packages
-  - scientific-computing
-  - python
+  - Scientific Computing
+  - Python
   - Open-Source
 tags_raw:
   - conda
@@ -102,7 +102,7 @@ apis:
     baseURL: https://conda.anaconda.org/conda-forge
     tags:
       - repodata
-      - channel
+      - Channel
       - Index
       - Packages
       - Metadata
