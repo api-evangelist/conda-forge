@@ -32,18 +32,22 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://conda-forge.org/assets/img/anvil_white.png
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-24
 tags:
   - Conda
   - Packages
   - Scientific Computing
   - Python
-  - Open-Source
+  - Open Source
 tags_raw:
   - conda
   - packages
   - scientific-computing
   - python
   - open-source
+  - Open-Source
 created: "2026-06-13"
 modified: "2026-06-13"
 url: https://raw.githubusercontent.com/api-evangelist/conda-forge/refs/heads/main/apis.yml
