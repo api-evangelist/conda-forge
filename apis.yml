@@ -140,6 +140,12 @@ apis:
         email: ""
         url: https://conda-forge.org/community/
 common:
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+  - type: FinOps
+    url: finops/finops.yml
   - type: VulnerabilityDisclosure
     url: security/conda-forge-vulnerability-disclosure.yml
   - type: DomainSecurity
