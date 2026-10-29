@@ -64,63 +64,72 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Community-led conda package channel providing over 33,000 open-source packages for scientific computing, data science, and general Python development.
+conda-forge is a community-led conda package channel providing over 33,000 open-source packages for scientific computing, data science, and general Python development. The project offers programmatic access through the Anaconda.org REST API for querying package metadata, searching packages by name, retrieving version histories, and accessing distribution file details. Additionally, the conda repository format exposes repodata and channeldata JSON indices that enumerate all packages, versions, platforms, and dependency metadata across every supported architecture.
 
-## Overview
+**Areas:** Conda · Packages · Scientific Computing · Python · Open Source
 
-conda-forge is a GitHub organization and community effort that maintains conda package recipes and provides a free, open-source package channel. Packages are built through automated CI infrastructure and distributed via the Anaconda.org hosting platform.
+## conda-forge on APIs.io
 
-## APIs
+Everything profiled for conda-forge is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/conda-forge/](https://apis.io/providers/conda-forge/)** — or go straight to one of the APIs or properties below.
 
-### Anaconda.org REST API
+### APIs (2)
 
-Base URL: `https://api.anaconda.org`
+- [Anaconda.org Package API](https://apis.io/apis/conda-forge/anacondaorg-package-api/) — REST API hosted on api.anaconda.org that provides read access to conda-forge package metadata including package details, version lists, platform…
+- [conda-forge Channel Repodata API](https://apis.io/apis/conda-forge/conda-forge-channel-repodata-api/) — Static JSON index files served over HTTPS from conda.anaconda.org for each supported platform subdirectory (linux-64, osx-64, win-64, etc.). repodata.json…
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /package/conda-forge/{name}` | Full metadata for a conda-forge package including versions, platforms, license, and download stats |
-| `GET /user/conda-forge` | conda-forge organization profile |
-| `GET /search?name={term}` | Search packages across all Anaconda.org channels by name |
+### Published properties
 
-Example:
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-```bash
-curl https://api.anaconda.org/package/conda-forge/numpy
-```
+#### Security (2)
 
-### conda Channel Repodata
+Authentication, trust centre, and vulnerability disclosure.
 
-Base URL: `https://conda.anaconda.org/conda-forge`
+- [Conda Forge Domain Security](https://apis.io/security/conda-forge/conda-forge-domain-security/)
+- [Conda Forge Vulnerability Disclosure](https://apis.io/security/conda-forge/conda-forge-vulnerability-disclosure/)
 
-| Resource | Description |
-|----------|-------------|
-| `/{subdir}/repodata.json.zst` | Compressed package index for a platform (e.g., linux-64, osx-64, win-64) |
-| `/{subdir}/repodata.json` | Uncompressed package index |
-| `/channeldata.json` | Cross-platform index of all 33,000+ packages with docs, license, and subdir info |
+#### Plans and pricing (1)
 
-Example:
+Published plans, tiers and prices.
 
-```bash
-# Channel-wide package index
-curl https://conda.anaconda.org/conda-forge/channeldata.json
+- [Plans](https://apis.io/plans/conda-forge/plans/)
 
-# Platform-specific package index (compressed)
-curl https://conda.anaconda.org/conda-forge/linux-64/repodata.json.zst
-```
+#### Rate limits (1)
 
-## Access
+Published request limits.
 
-All conda-forge APIs are publicly accessible with no authentication required for read operations. No API key or subscription is needed.
+- [Rate Limits](https://apis.io/rate-limits/conda-forge/rate-limits/)
 
-## Resources
+#### FinOps (1)
 
-- Website: https://conda-forge.org/
-- Documentation: https://conda-forge.org/docs/
-- GitHub: https://github.com/conda-forge
-- Packages: https://anaconda.org/conda-forge
-- Community Chat: https://conda-forge.zulipchat.com/
-- Status: https://conda-forge.org/status/
+What the API costs to run, by operation.
 
-## APIs.json
+- [Finops](https://apis.io/finops/conda-forge/finops/)
 
-This repository contains an [APIs.json 0.19](apis.yml) profile cataloging the conda-forge public APIs.
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Getting started](https://conda-forge.org/docs/user/introduction/)
+- [Support](https://github.com/conda-forge/conda-forge.github.io/issues)
+- [Blog](https://conda-forge.org/news/)
+- [Terms of service](https://www.anaconda.com/terms-of-service)
+- [Privacy policy](https://www.anaconda.com/privacy-policy)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for conda-forge: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/conda-forge/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
